@@ -73,7 +73,7 @@ config.imagemanager.query = ConfigYesNo(default=True)
 config.imagemanager.lastbackup = ConfigNumber(default=0)
 config.imagemanager.number_to_keep = ConfigNumber(default=0)
 if getImageType() == "release":
-	config.imagemanager.imagefeed_OBH = ConfigText(default="https://openbh.amikohome.co.uk/openbhfirmware/json.php", fixed_size=False)
+	config.imagemanager.imagefeed_OBH = ConfigText(default="https://openbh.amikohome.co.uk/openbhfirmware/json.php?box=", fixed_size=False)
 elif getImageType() == "community":
 	config.imagemanager.imagefeed_OBH = ConfigText(default="https://images.blackhole-community.com/json", fixed_size=False)
 config.imagemanager.imagefeed_OBH.value = config.imagemanager.imagefeed_OBH.default # this is no longer a user setup option
